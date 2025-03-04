@@ -1,0 +1,44 @@
+# Este es el archivo de configuración de Git por usuario.
+[user]
+    name = Cristian Andrione
+    email = cristian.andrione@gmail.com
+
+[alias]
+    a = add .
+    A = ADD -A
+    s = status --short
+    st = status
+    co = checkout
+    sw = switch
+    br = branch
+    sh = branch -v
+    rf = reflog -v
+    ci = commit
+    l = log --pretty=format:'%C(bold blue)%h%C(reset) %C(green)[%an]%C(reset) %C(cyan)(%ad)%C(reset) %s'
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+[pull]
+	rebase = true
+
+[credential]
+	helper = manager-core
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = helix
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictstyle = zdiff3
+	
+[color]
+	ui = true
